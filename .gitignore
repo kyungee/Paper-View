@@ -5,6 +5,7 @@ build/
 !**/src/main/**
 !**/src/test/**
 
+/src/main/**/application-db.yml
 ### IntelliJ IDEA ###
 .idea
 *.iws
