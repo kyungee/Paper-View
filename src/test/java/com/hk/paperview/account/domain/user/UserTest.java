@@ -1,7 +1,6 @@
-package com.hk.paperview.domain.user;
+package com.hk.paperview.account.domain.user;
 
 import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +15,11 @@ class UserTest {
 
     @Autowired
     private UserRepository userRepository;
+    private Long savedIdx;
 
     @AfterAll
     public void tearDown() {
-        userRepository.deleteById(2L);
+        userRepository.deleteById(savedIdx);
     }
 
     @Test
@@ -42,8 +42,8 @@ class UserTest {
         String name = "testName";
 
         //when
-        userRepository.save(User.builder().id(id).password(password).name(name).build());
-
+        User user = userRepository.save(User.builder().id(id).password(password).name(name).build());
+        savedIdx = user.getIdx();
         //then
         List<User> defaultUserList =  userRepository.findAll();
         assertEquals(defaultUserList.get(1).getId(),"testID");

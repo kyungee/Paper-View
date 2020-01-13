@@ -1,4 +1,4 @@
-package com.hk.paperview.domain;
+package com.hk.paperview.account.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

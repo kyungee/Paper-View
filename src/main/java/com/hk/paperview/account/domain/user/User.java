@@ -1,6 +1,6 @@
-package com.hk.paperview.domain.user;
+package com.hk.paperview.account.domain.user;
 
-import com.hk.paperview.domain.BaseTimeEntity;
+import com.hk.paperview.account.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
