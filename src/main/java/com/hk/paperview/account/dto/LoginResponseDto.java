@@ -6,10 +6,10 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class SignUpResponseDto {
-    private String name;
+public class LoginResponseDto {
+    private String userName;
     @Builder
-    public SignUpResponseDto (String name) {
-        this.name = name;
+    public LoginResponseDto (String userName) {
+        this.userName = userName;
     }
 }

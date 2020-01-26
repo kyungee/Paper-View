@@ -1,6 +1,6 @@
 spring:
   profiles:
-    include: db
+    include: db   #MariaDB (배포용)
   jpa:
     show-sql: true
     properties:
