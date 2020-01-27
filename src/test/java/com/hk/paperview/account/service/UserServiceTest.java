@@ -25,12 +25,9 @@ class UserServiceTest {
     @Autowired
     private UserRepository userRepository;
 
-    //TODO: need to fix
-    private Long savedId = 2L;
-
     @AfterEach
     public void tearDown() {
-        userRepository.deleteById(savedId);
+        userRepository.deleteAll();
     }
     @Test
     public void 회원가입_성공() {
